@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/bienvenida">
+
+    <fragment
+        android:id="@+id/menu"
+        android:name="com.example.m1n1games.Menu"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menu_to_ranking"
+            app:destination="@id/ranking" />
+        <action
+            android:id="@+id/action_menu_to_conecta4"
+            app:destination="@id/conecta4" />
+        <action
+            android:id="@+id/action_menu_to_damasChinas"
+            app:destination="@id/damasChinas" />
+        <action
+            android:id="@+id/action_menu_to_menuLightOutFragment"
+            app:destination="@id/menuLightOutFragment" />
+        <action
+            android:id="@+id/action_menu_to_bienvenida"
+            app:destination="@id/bienvenida" />
+        <action
+            android:id="@+id/action_menu_to_problemastecniosFragment"
+            app:destination="@id/problemastecniosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ranking"
+        android:name="com.example.m1n1games.Ranking"
+        android:label="fragment_ranking"
+        tools:layout="@layout/fragment_ranking" >
+        <action
+            android:id="@+id/action_ranking_to_menu"
+            app:destination="@id/menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/conecta4"
+        android:name="com.example.m1n1games.Conecta4"
+        android:label="fragment_conecta4"
+        tools:layout="@layout/fragment_conecta4" />
+    <fragment
+        android:id="@+id/bienvenida"
+        android:name="com.example.m1n1games.Bienvenida"
+        android:label="fragment_bienvenida"
+        tools:layout="@layout/fragment_bienvenida" >
+        <action
+            android:id="@+id/action_bienvenida_to_menu"
+            app:destination="@id/menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/lightsOut"
+        android:name="com.example.m1n1games.LightsOut"
+        android:label="fragment_lights_out"
+        tools:layout="@layout/fragment_lights_out" >
+
+        <action
+            android:id="@+id/action_lightsOut_to_menuLightOutFragment"
+            app:destination="@id/menuLightOutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/damasChinas"
+        android:name="com.example.m1n1games.DamasChinas"
+        android:label="fragment_damas_chinas"
+        tools:layout="@layout/fragment_damas_chinas" />
+    <fragment
+        android:id="@+id/menuLightOutFragment"
+        android:name="com.example.m1n1games.MenuLightOutFragment"
+        android:label="fragment_menu_light_out"
+        tools:layout="@layout/fragment_menu_light_out" >
+        <action
+            android:id="@+id/action_menuLightOutFragment_to_lightsOut"
+            app:destination="@id/lightsOut" />
+        <action
+            android:id="@+id/action_menuLightOutFragment_to_menu"
+            app:destination="@id/menu" />
+        <action
+            android:id="@+id/action_menuLightOutFragment_to_ranking"
+            app:destination="@id/ranking" />
+        <action
+            android:id="@+id/action_menuLightOutFragment_to_comojugarfragment"
+            app:destination="@id/comojugarfragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/problemastecniosFragment"
+        android:name="com.example.m1n1games.problemastecniosFragment"
+        android:label="fragment_problemastecnios"
+        tools:layout="@layout/fragment_problemastecnios" >
+        <action
+            android:id="@+id/action_problemastecniosFragment_to_menu"
+            app:destination="@id/menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/comojugarfragment"
+        android:name="com.example.m1n1games.Comojugarfragment"
+        android:label="fragment_comojugarfragment"
+        tools:layout="@layout/fragment_comojugarfragment" >
+        <action
+            android:id="@+id/action_comojugarfragment_to_menuLightOutFragment"
+            app:destination="@id/menuLightOutFragment" />
+    </fragment>
+</navigation>
